@@ -1,0 +1,23 @@
+{
+  "name": "node-Hangman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hautran1993/node-Hangman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hautran1993/node-Hangman/issues"
+  },
+  "homepage": "https://github.com/hautran1993/node-Hangman#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1"
+  }
+}
