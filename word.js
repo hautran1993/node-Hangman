@@ -32,3 +32,5 @@ module.exports = Words
 //check user guess vs user word
 // export this file into letter.js
 //exports.modole
+
+//process if user is wrong or right

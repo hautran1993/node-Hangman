@@ -1,4 +1,4 @@
-
+//
 function Letter(letters) {
   this.avaliableLetters = letters;
   this.checkIfValid = function(guess) {
@@ -26,3 +26,4 @@ console.log("ggggg")
           //return the userGuess
         //else
             //return userGuess invalid
+//in letter , has underscores and changes underscores back to //word.            
