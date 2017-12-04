@@ -11,6 +11,8 @@ function Words() {
         console.log(lettersArr);
     }
 }
+//function to check if word exist
+//function to check letters with words
 module.exports = Words
 
 //pick a word insdie of the word function
