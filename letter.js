@@ -6,7 +6,8 @@ function Letter(letters) {
   }
 }
 module.exports = Letter;
-console.log("ggggg")
+console.log("ggggg");
+
 //display word in the form of underscored(_)
 //update current letter based on user guesses
 //if user guesses right then show letter
@@ -26,4 +27,4 @@ console.log("ggggg")
           //return the userGuess
         //else
             //return userGuess invalid
-//in letter , has underscores and changes underscores back to //word.            
+//in letter , has underscores and changes underscores back to //word.
