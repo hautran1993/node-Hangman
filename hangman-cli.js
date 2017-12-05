@@ -1,4 +1,4 @@
-var game = require("./game.js")
+var game = require("./javascript/game.js")
 
 console.log(game);
 //promise the user if they want to play Hangman
