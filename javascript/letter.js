@@ -1,12 +1,11 @@
-//
+//letters
 function Letter(letters) {
+  console.log("yo");
   this.avaliableLetters = letters;
   this.checkIfValid = function(guess) {
-    console.log("you rock");
-  }
-}
+  };
+};
 module.exports = Letter;
-console.log("ggggg");
 
 //display word in the form of underscored(_)
 //update current letter based on user guesses

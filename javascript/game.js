@@ -2,9 +2,9 @@ var Word = require("./word.js");
 var inquirer = require("inquirer");
 
 //
-// function Game() {
-//
-// }
+function Game() {
+
+}
 
 module.exports = Game;
 //initaialze the game

@@ -1,9 +1,27 @@
-var game = require("./javascript/game.js")
+var gameConstructor = require("./javascript/game.js");
+var colors = require("colors");
+var prompt = require("prompt");
+var WordConstructor = require("./javascript/word.js");
+var inquirer = require("inquirer");
 
-console.log(game);
-//promise the user if they want to play Hangman
-  //if they want to play ready hangman game
-    //play hangman game
+//calling start game function
+    startGame();
 
-  // if not
-    //exit program
+//startgame function
+    function startGame() {
+        //#1 first prompt when game starts
+    	inquirer.prompt([
+    		{
+    			name: "startGame",
+    			message: "Hello! Would you like to play hangame?",
+    			type: "list",
+    			choices: ["Yes", "No"]
+    		}
+    	]).then(function(ans){
+    		if (ans.startGame === "Yes") {
+    			chooseCategory();
+    		} else {
+    			console.log("awwwhhh okay....maybe next time!")
+    		}
+    	});
+    }
