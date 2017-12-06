@@ -19,9 +19,9 @@ var inquirer = require("inquirer");
     		}
     	]).then(function(ans){
     		if (ans.startGame === "Yes") {
-    			chooseCategory();
+                //calling a function to get a random word;
     		} else {
     			console.log("awwwhhh okay....maybe next time!")
     		}
     	});
-    }
+    };
