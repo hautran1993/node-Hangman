@@ -1,38 +1,44 @@
-//import letters
+ //import letters
 var Letter = require("./letter.js")
-var lettersArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-    'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-    't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var word = ['hello', 'goodbye'];
+var inquirer = require("inquirer");
+var colors = require("colors");
+var randomWord = word[Math.floor(Math.random() * word.length)].toLowerCase(); 
 
-var availiable = new Letter(lettersArr);
+function WordConstructor(randomWord) {
+   this.randomWord = randomWord;
+   this.ltrArray = function() {
+    var newLetter = new Letter(randomWord);
+    newLetter.letterArray(randomWord);     
+   }; 
+   this.changeToUnderscore = function() {
+    var newLetter = new Letter(randomWord);
+    var randomWordArray =  newLetter.letterArray(randomWord); 
+      for (var i = 0; i < randomWordArray.length; i++) {
+        randomWordArray[i] = "_";
+        // console.log(randomWordArray.join(" "));
+      }
+      console.log(randomWordArray.join(" "));  
+   };
+};
+    //this is the same thing as a property
+    WordConstructor.prototype.UserGuess = function() {
+      inquirer.prompt{
 
-function Words() {
-    this.checkGuess = function() {
-        console.log(lettersArr);
+      }.then
+      //if user input is inside of the word
+        //push to correctWord array
+          //run loop with randomwordarray then 
+            //if userinput is correct randomword[i] = userGuess;
+            //console.log(randomWordArray.join);
+        //else -- userguess
     }
-}
-//function to check if word exist
-//function to check letters with words
-module.exports = Words
+    //testing lines 11 and 12 to see if it was connected
+    //calling the constructor function outside the function;
+    var newWord = new WordConstructor(randomWord);
+    newWord.changeToUnderscore();
+    // console.log(newWord.randomWord);
+//are from letter.js converted to word
 
-//pick a word insdie of the word function
-  //select current word
+// module.exports = WordConstructor;
 
-//function pick word
-  //return random word
-
-//display the current word to the user(displayword)
-  //displayword = letter.updatecurrentword(currentword)
-  //return the random word for the word array
-
-
-//update the display word, when the suer guesses right
-//create an array of words
-//by using randomword function
-// check aray for random words
-
-//check user guess vs user word
-// export this file into letter.js
-//exports.modole
-
-//process if user is wrong or right

@@ -22,6 +22,6 @@ var inquirer = require("inquirer");
                 //calling a function to get a random word;
     		} else {
     			console.log("awwwhhh okay....maybe next time!")
-    		}
+    		};
     	});
     };

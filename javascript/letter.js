@@ -1,11 +1,21 @@
-//letters
-function Letter(letters) {
-  console.log("yo");
-  this.avaliableLetters = letters;
-  this.checkIfValid = function(guess) {
-  };
+ //constructor for letters
+
+var LetterConstructor = function(randomWord) {
+  this.avaliableWord = randomWord;
+  this.letterArray = function(randomWord) {
+    //splitting the word from random word array randomWord.split("");
+    console.log(randomWord.split(""));
+      return randomWord.split("");
+  }
+  //current state
+  // this.currentState = "_";
+  // this.checkIfValid = function(guess) {
+  //   if (this.avaliableLetters.toLowerCase() === guess) {
+  //         this.currentState = this.avaliableWord
+  //   };
+  // };
 };
-module.exports = Letter;
+module.exports = LetterConstructor;
 
 //display word in the form of underscored(_)
 //update current letter based on user guesses

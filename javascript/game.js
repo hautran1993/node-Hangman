@@ -1,12 +1,14 @@
-var Word = require("./word.js");
-var inquirer = require("inquirer");
-
-//
-function Game() {
-
-}
-
-module.exports = Game;
+// var Word = require("./word.js");
+// var inquirer = require("inquirer");
+// function GameConstructor() {
+//   this.newWordArray = function() {
+//     var newWord = new Word(randomWord);
+//     newWord.ltrArray();
+//   };
+// }
+// var word1 = new GameConstructor();
+// console.log(word1.newWordArray); 
+// module.exports = GameConstructor;
 //initaialze the game
   //set all variable to start game
   //set Game over to false
@@ -41,6 +43,7 @@ module.exports = Game;
 //run a loop for letters, and replace letters with underscores(_)
 //regular call letter.js by var
 //}
+
 //function hang{
 //user input, will take inquire code and prompt
 // var guesses available = 10
