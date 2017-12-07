@@ -72,12 +72,7 @@ function HangmanGame() {
         that.guesses--;
         console.log(that.guesses)
       }
-      if(that.guesses <= 0) {
-        console.log("you loose buddy try again".red);
-        that.startGame();
-      }
-  
-        //check if a letter is inside the word
+      //check if a letter is inside the word
       // if (answer.letter) {
 
       // }
@@ -85,12 +80,33 @@ function HangmanGame() {
       //if yes call askForALetter
       that.askForALetter(word);
       //else gameover, call this.startGame
-    })
-      .catch(function (error) {
+    }).catch(function (error) {
         if (error) throw error;
       });
   };
-}
+  //game over function to call when ever the game is over.
+  this.gameOver =  function() {
+    if(this.guesses >= 8 ){
+      console.log('you loose my guy');
+      this.startGame();
+    }
+  }
+};
+var game = new HangmanGame();
+game.startGame();   
+  //   inquirer.prompt([
+  //     {
+  //     name: "play",
+  //     message: "Would you like to play again",
+  //     type: "list",
+  //     choices: ["yes", "no"] 
+  //   }
+  // ]).then(function(ans){
+  //     if(ans.play === "yes"){
+        
+  //     }
+  //   })
+  // } 
 
 //if user input is inside of the word
 //push to correctWord array
@@ -101,12 +117,9 @@ function HangmanGame() {
 //testing lines 11 and 12 to see if it was connected
 //calling the constructor function outside the function;
 
-
-var game = new HangmanGame();
-game.startGame();
 // game.askForALetter();
 
     // console.log(newWord.randomWord);
 //are from letter.js converted to word
 
-// module.exports = WordConstructor;
+// module.exports = WordConstructor
