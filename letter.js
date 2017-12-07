@@ -7,13 +7,6 @@ var Letter = function(randomWord) {
     console.log(randomWord.split(""));
       return randomWord.split("");
   }
-  //current state
-  // this.currentState = "_";
-  // this.checkIfValid = function(guess) {
-  //   if (this.avaliableLetters.toLowerCase() === guess) {
-  //         this.currentState = this.avaliableWord
-  //   };
-  // };
 };
 module.exports = Letter;
 

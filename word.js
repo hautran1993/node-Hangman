@@ -3,11 +3,11 @@ var Letter = require("./letter.js")
 var word = ['hello', 'goodbye'];
 var inquirer = require("inquirer");
 var colors = require("colors");
+var guesses = 8;
 
 function getRandomWord() {
   return word[Math.floor(Math.random() * word.length)].toLowerCase();
 }
-
 
 function Word(randomWord) {
    this.randomWord = randomWord;
@@ -50,7 +50,6 @@ HangmanGame.prototype.startGame = function() {
       var randomWord =  getRandomWord();
       this.word = new Word(randomWord);
       this.word.changeToUnderscore();
-
       this.askForALetter();
 
     //calling a function to get the game started;
@@ -64,19 +63,24 @@ HangmanGame.prototype.askForALetter = function () {
   inquirer.prompt([
     {
       name:"letter",
-      message:"pick a letter yo!"
+      message:"pick a letter yo!",
+      type:"list",
+      choices: [this.guesses]
     }
     ]).then(function(answer){
+      if(this.getRandomWord === this.user.guess){
       //decrement everytime the user guesses the wrong word.
       this.guesses--;
+      }
         //check if a letter is inside the word
         this.word.guess(answer.letter)
+        if(answer.letter){
+
+        }
         //decide if we keep goin
           //if yes call askForALetter
           askForALetter();
             //else gameover, call this.startGame
-            
-  
     });
 };
 
@@ -93,6 +97,7 @@ HangmanGame.prototype.askForALetter = function () {
 
 var game = new HangmanGame();
 game.startGame();
+game.askForALetter();
     
     // console.log(newWord.randomWord);
 //are from letter.js converted to word
