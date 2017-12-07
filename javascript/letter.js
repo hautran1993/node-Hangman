@@ -1,6 +1,6 @@
  //constructor for letters
 
-var LetterConstructor = function(randomWord) {
+var Letter = function(randomWord) {
   this.avaliableWord = randomWord;
   this.letterArray = function(randomWord) {
     //splitting the word from random word array randomWord.split("");
@@ -15,7 +15,7 @@ var LetterConstructor = function(randomWord) {
   //   };
   // };
 };
-module.exports = LetterConstructor;
+module.exports = Letter;
 
 //display word in the form of underscored(_)
 //update current letter based on user guesses

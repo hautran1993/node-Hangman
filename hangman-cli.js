@@ -19,7 +19,8 @@ var inquirer = require("inquirer");
     		}
     	]).then(function(ans){
     		if (ans.startGame === "Yes") {
-                //calling a function to get a random word;
+				//calling a function to get a random word;
+				//
     		} else {
     			console.log("awwwhhh okay....maybe next time!")
     		};
