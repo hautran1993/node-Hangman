@@ -71,7 +71,12 @@ function HangmanGame() {
         //decrement everytime the user guesses the wrong word.
         that.guesses--;
         console.log(that.guesses)
-      }
+
+      }else if(word.indexOf(answer.letter) === that.word) {
+        console.log("you win")
+        that.startGame();
+      };
+        
       //check if a letter is inside the word
       // if (answer.letter) {
 
