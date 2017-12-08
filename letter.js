@@ -6,8 +6,11 @@ var Letter = function(randomWord) {
     //splitting the word from random word array randomWord.split("");
     console.log(randomWord.split(""));
       return randomWord.split("");
+     ;
   }
+  console.log("yo this letter")
 };
+var letter1 = new Letter();
 module.exports = Letter;
 
 //display word in the form of underscored(_)

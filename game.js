@@ -1,5 +1,7 @@
-// var Word = require("./word.js");
-// var inquirer = require("inquirer");
+var Word = require("./word.js");
+var inquirer = require("inquirer");
+console.log("yo this be game")
+
 // function GameConstructor() {
 //   this.newWordArray = function() {
 //     var newWord = new Word(randomWord);
