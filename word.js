@@ -8,12 +8,15 @@ var wordArray=[];
 
 var Word = function() {
   this.randomWord = function() {
-    return this.wordArray[0];
+    return this.wordArray[Math.floor(Math.random() * this.wordArray.length)].toLowerCase();
   };
-  this.wordArray = ['hello', 'goodbye'] ;
-}
-
-
+  this.wordArray = ['hello', 'goodbye', 'done Go'];
+  this.nextWord = function () {
+    for (var i = 0; this.randomWord.length; i++) {
+      this.randomWord[i] = "_";
+    };
+  };
+};
 
 module.exports = Word;
 // function getRandomWord() {

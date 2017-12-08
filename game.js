@@ -3,8 +3,8 @@ var inquirer = require("inquirer");
 console.log("yo this be game");
 
 var word1 = new Word();
-console.log(word1.randomWord());
-
+var currentWord = word1.randomWord();
+console.log(currentWord);
 // function GameConstructor() {
 //   this.newWordArray = function() {
 //     var newWord = new Word(randomWord);
