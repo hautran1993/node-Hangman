@@ -4,6 +4,7 @@ var word = ['hello', 'goodbye'];
 var inquirer = require("inquirer");
 var colors = require("colors");
 var guesses = 8;
+var wordArray=[];
 
 function getRandomWord() {
   return word[Math.floor(Math.random() * word.length)].toLowerCase();
@@ -64,17 +65,17 @@ function HangmanGame() {
       {
         name: "letter",
         message: "pick a letter yo!",
-        type: "input",
+        type: "input"
       }
     ]).then(function (answer) {
       if (word.indexOf(answer.letter) === -1) {
         //decrement everytime the user guesses the wrong word.
         that.guesses--;
+        wordArray += answer.letter
         console.log(that.guesses)
-
-      }else if(word.indexOf(answer.letter) === that.word) {
-        console.log("you win")
-        that.startGame();
+        console.log(wordArray);
+        that.gameOver();
+        //game over function here
       };
         
       //check if a letter is inside the word
@@ -90,15 +91,17 @@ function HangmanGame() {
       });
   };
   //game over function to call when ever the game is over.
-  this.gameOver =  function() {
+  this.gameOver = function(word) {
     if(this.guesses >= 8 ){
       console.log('you loose my guy');
-      this.startGame();
+    }else if(wordArray === word){
+      console.log('you win');
+    }else{
     }
   }
 };
 var game = new HangmanGame();
-game.startGame();   
+game.startGame();  
   //   inquirer.prompt([
   //     {
   //     name: "play",
