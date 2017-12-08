@@ -75,7 +75,14 @@ function HangmanGame() {
         console.log(that.guesses)
         console.log(wordArray);
         that.gameOver();
-        //game over function here
+        //function for where it'll push _ into words.
+        if (randomWord.includes(ans.letter) === true) {
+          for (var i = 0; i < word.length; i++) {
+              if (randomWord[i] === ans.letter) {
+                  displayWord = displayWord.substring(0, i) + randomWord[i] + word.substring(i + 1);
+              }
+          }
+        }
       };
         
       //check if a letter is inside the word
