@@ -1,6 +1,9 @@
 var Word = require("./word.js");
 var inquirer = require("inquirer");
-console.log("yo this be game")
+console.log("yo this be game");
+
+var word1 = new Word();
+console.log(word1.randomWord());
 
 // function GameConstructor() {
 //   this.newWordArray = function() {

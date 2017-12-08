@@ -7,9 +7,11 @@ var guesses = 8;
 var wordArray=[];
 
 var Word = function() {
-  console.log("hey word, how you doing");
+  this.randomWord = function() {
+    return this.wordArray[0];
+  };
+  this.wordArray = ['hello', 'goodbye'] ;
 }
- var word = new Word();
 
 
 
