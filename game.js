@@ -4,7 +4,6 @@ console.log("yo this be game");
 
 var word1 = new Word();
 var currentWord = word1.randomWord();
-word1.nextWord(currentWord);
 console.log(word1.nextWord(currentWord));
 
 // function GameConstructor() {

@@ -1,16 +1,33 @@
  //constructor for letters
 
-var Letter = function(randomWord) {
-  this.avaliableWord = randomWord;
-  this.letterArray = function(randomWord) {
-    //splitting the word from random word array randomWord.split("");
-    console.log(randomWord.split(""));
-      return randomWord.split("");
-     ;
-  }
-  console.log("yo this letter")
+var Letter = function(currentWord, currentGuess, displayArr) {
+  this.currentWord = currentWord;
+  this.currentGuess = currentGuess;
+  this.displayArr = displayArr;
+  this.displayLetters = function() {
+    for (var i = 0; i < currentWord.length; i++) {
+      //if current guess is blank
+      if(this.currentGuess !== ""){
+        if(this.currentWord[i] === " "){
+          displayArr.push(" ");
+          
+        }else if(this.currentWord[i] === this.currentGuess){
+          displayArr.push(this.currentGuess);
+        }else{
+          displayArr.push("_");
+        };
+      }else{
+      // if else statement to decided to push _ or space with multiple words
+        if(currentWord[i] === " "){
+          displayArr.push(" ");
+        }else{
+          displayArr.push("_");
+        };
+      }
+    };
+    return displayArr;
+  };
 };
-var letter1 = new Letter();
 module.exports = Letter;
 
 //display word in the form of underscored(_)

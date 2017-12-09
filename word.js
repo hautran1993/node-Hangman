@@ -5,30 +5,24 @@ var word = ['hello', 'goodbye'];
 var inquirer = require("inquirer");
 var colors = require("colors");
 var guesses = 8;
-var wordArray= [];
 
 var Word = function() {
+  this.wordArray = ['hello', 'goodbye', 'done Go home'];
+  this.displayArr = [];
   //random function to get random words
   this.randomWord = function() {
     return this.wordArray[Math.floor(Math.random() * this.wordArray.length)].toLowerCase();
   };
-  //wod array to store words
-  this.wordArray = ['hello', 'goodbye', 'done Go home'];
   //nexword function to make underscores for words
   this.nextWord = function(currentWord) {
     //empty array to store underscore ready to display
-    var underscore = [];
     //loop to go through word array to push underscores
-    for (var i = 0; i < currentWord.length; i++) {
-      // if else statement to decided to push _ or space with multiple words
-      if(currentWord[i] === " "){
-        underscore.push(" ");
-      }else{
-        underscore.push("_");
-      };
-    };
-    return (underscore.join(" "));
+    var newLetter = new Letter(currentWord, currentGuess, this.displayArr);
+    this.displayArr = newLetter.displayLetters();
+    console.log(this.displayArr.join(" "));
   };
+  //process the word, check if that letter is avaliable
+
 };
 
 module.exports = Word;
