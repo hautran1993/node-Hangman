@@ -5,7 +5,7 @@ var word = ['hello', 'goodbye'];
 var inquirer = require("inquirer");
 var colors = require("colors");
 var guesses = 8;
-var wordArray=[];
+var wordArray= [];
 
 var Word = function() {
   //random function to get random words
@@ -19,7 +19,7 @@ var Word = function() {
     //empty array to store underscore ready to display
     var underscore = [];
     //loop to go through word array to push underscores
-    for (var i = 0;i < currentWord.length; i++) {
+    for (var i = 0; i < currentWord.length; i++) {
       // if else statement to decided to push _ or space with multiple words
       if(currentWord[i] === " "){
         underscore.push(" ");

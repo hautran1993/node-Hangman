@@ -1,7 +1,6 @@
-var gameConstructor = require("./javascript/game.js");
+var game = require("./game.js");
 var colors = require("colors");
 var prompt = require("prompt");
-var WordConstructor = require("./javascript/word.js");
 var inquirer = require("inquirer");
 
 //calling start game function
@@ -20,9 +19,10 @@ var inquirer = require("inquirer");
     	]).then(function(ans){
     		if (ans.startGame === "Yes") {
 				//calling a function to get a random word;
+				console.log(`here is your word`);
 				//
     		} else {
-    			console.log("awwwhhh okay....maybe next time!")
+    			console.log('thats too bad, maybe next time.')
     		};
     	});
     };
