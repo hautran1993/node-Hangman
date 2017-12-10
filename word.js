@@ -17,7 +17,7 @@ var Word = function() {
   this.nextWord = function(currentWord) {
     //empty array to store underscore ready to display
     //loop to go through word array to push underscores
-    var newLetter = new Letter(currentWord, currentGuess, this.displayArr);
+    var newLetter = new Letter(currentWord, this.currentGuess, this.displayArr);
     this.displayArr = newLetter.displayLetters();
     console.log(this.displayArr.join(" "));
   };

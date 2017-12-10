@@ -6,18 +6,17 @@ var Letter = function(currentWord, currentGuess, displayArr) {
   this.displayArr = displayArr;
   this.displayLetters = function() {
     for (var i = 0; i < currentWord.length; i++) {
-      //if current guess is blank
+//if current guess is blank
       if(this.currentGuess !== ""){
         if(this.currentWord[i] === " "){
           displayArr.push(" ");
-          
         }else if(this.currentWord[i] === this.currentGuess){
           displayArr.push(this.currentGuess);
         }else{
           displayArr.push("_");
         };
       }else{
-      // if else statement to decided to push _ or space with multiple words
+// if else statement to decided to push _ or space with multiple words
         if(currentWord[i] === " "){
           displayArr.push(" ");
         }else{
