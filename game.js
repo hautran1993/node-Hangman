@@ -40,7 +40,7 @@ function HangmanGame() {
         type: "list"  
         }
       ]).then(function(ans) {
-        if(ans.letter === currentWord) {
+        if(ans.letter === this.currentGuess) {
           console.log("this");
         // }else{
         };
